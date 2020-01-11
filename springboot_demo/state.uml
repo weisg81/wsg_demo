@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>pers.weisg.base.springboot_demo.DesignPattern.state</OriginalElement>
+  <nodes>
+    <node x="497.16666666666663" y="974.0">pers.weisg.base.springboot_demo.DesignPattern.state.ClientTest</node>
+    <node x="0.0" y="160.0">pers.weisg.base.springboot_demo.DesignPattern.state.NoRaffleState</node>
+    <node x="759.0" y="160.0">pers.weisg.base.springboot_demo.DesignPattern.state.DispenseOutState</node>
+    <node x="506.0" y="160.0">pers.weisg.base.springboot_demo.DesignPattern.state.DispenseState</node>
+    <node x="251.0" y="160.0">pers.weisg.base.springboot_demo.DesignPattern.state.CanRaffleState</node>
+    <node x="646.7037037037037" y="0.0">pers.weisg.base.springboot_demo.DesignPattern.state.State</node>
+    <node x="461.16666666666663" y="408.0">pers.weisg.base.springboot_demo.DesignPattern.state.RaffleActivity</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="pers.weisg.base.springboot_demo.DesignPattern.state.RaffleActivity" target="pers.weisg.base.springboot_demo.DesignPattern.state.DispenseState">
+      <point x="-8.75" y="-258.0" />
+      <point x="574.9166666666666" y="328.0" />
+      <point x="544.8333333333334" y="328.0" />
+      <point x="-77.66666666666667" y="74.0" />
+    </edge>
+    <edge source="pers.weisg.base.springboot_demo.DesignPattern.state.RaffleActivity" target="pers.weisg.base.springboot_demo.DesignPattern.state.DispenseOutState">
+      <point x="43.75" y="-258.0" />
+      <point x="627.4166666666666" y="348.0" />
+      <point x="801.3333333333333" y="348.0" />
+      <point x="-84.66666666666669" y="74.0" />
+    </edge>
+    <edge source="pers.weisg.base.springboot_demo.DesignPattern.state.RaffleActivity" target="pers.weisg.base.springboot_demo.DesignPattern.state.NoRaffleState">
+      <point x="-113.75" y="-258.0" />
+      <point x="469.91666666666663" y="388.0" />
+      <point x="38.5" y="388.0" />
+      <point x="-77.0" y="74.0" />
+    </edge>
+    <edge source="pers.weisg.base.springboot_demo.DesignPattern.state.NoRaffleState" target="pers.weisg.base.springboot_demo.DesignPattern.state.RaffleActivity">
+      <point x="77.0" y="74.0" />
+      <point x="192.5" y="368.0" />
+      <point x="504.91666666666663" y="368.0" />
+      <point x="-78.75" y="-258.0" />
+    </edge>
+    <edge source="pers.weisg.base.springboot_demo.DesignPattern.state.CanRaffleState" target="pers.weisg.base.springboot_demo.DesignPattern.state.RaffleActivity">
+      <point x="0.0" y="74.0" />
+      <point x="368.5" y="348.0" />
+      <point x="539.9166666666666" y="348.0" />
+      <point x="-43.75" y="-258.0" />
+    </edge>
+    <edge source="pers.weisg.base.springboot_demo.DesignPattern.state.CanRaffleState" target="pers.weisg.base.springboot_demo.DesignPattern.state.State">
+      <point x="0.0" y="-74.0" />
+      <point x="368.5" y="130.0" />
+      <point x="692.4537037037037" y="130.0" />
+      <point x="-45.75" y="50.0" />
+    </edge>
+    <edge source="pers.weisg.base.springboot_demo.DesignPattern.state.DispenseOutState" target="pers.weisg.base.springboot_demo.DesignPattern.state.State">
+      <point x="0.0" y="-74.0" />
+      <point x="886.0" y="140.0" />
+      <point x="753.4537037037037" y="140.0" />
+      <point x="15.25" y="50.0" />
+    </edge>
+    <edge source="pers.weisg.base.springboot_demo.DesignPattern.state.DispenseOutState" target="pers.weisg.base.springboot_demo.DesignPattern.state.RaffleActivity">
+      <point x="84.66666666666669" y="74.0" />
+      <point x="970.6666666666667" y="368.0" />
+      <point x="662.4166666666666" y="368.0" />
+      <point x="78.75" y="-258.0" />
+    </edge>
+    <edge source="pers.weisg.base.springboot_demo.DesignPattern.state.DispenseState" target="pers.weisg.base.springboot_demo.DesignPattern.state.RaffleActivity">
+      <point x="1.4210854715202004E-14" y="74.0" />
+      <point x="622.5" y="328.0" />
+      <point x="592.4166666666666" y="328.0" />
+      <point x="8.75" y="-258.0" />
+    </edge>
+    <edge source="pers.weisg.base.springboot_demo.DesignPattern.state.DispenseState" target="pers.weisg.base.springboot_demo.DesignPattern.state.State">
+      <point x="0.0" y="-74.0" />
+      <point x="622.5" y="140.0" />
+      <point x="722.9537037037037" y="140.0" />
+      <point x="-15.25" y="50.0" />
+    </edge>
+    <edge source="pers.weisg.base.springboot_demo.DesignPattern.state.RaffleActivity" target="pers.weisg.base.springboot_demo.DesignPattern.state.State">
+      <point x="96.25" y="-258.0" />
+      <point x="679.9166666666666" y="378.0" />
+      <point x="1023.5" y="378.0" />
+      <point x="1023.5" y="130.0" />
+      <point x="783.9537037037037" y="130.0" />
+      <point x="45.749999999999986" y="50.0" />
+    </edge>
+    <edge source="pers.weisg.base.springboot_demo.DesignPattern.state.ClientTest" target="pers.weisg.base.springboot_demo.DesignPattern.state.RaffleActivity">
+      <point x="43.25" y="-27.0" />
+      <point x="626.9166666666666" y="949.0" />
+      <point x="644.9166666666666" y="949.0" />
+      <point x="61.25" y="258.0" />
+    </edge>
+    <edge source="pers.weisg.base.springboot_demo.DesignPattern.state.NoRaffleState" target="pers.weisg.base.springboot_demo.DesignPattern.state.State">
+      <point x="0.0" y="-74.0" />
+      <point x="115.5" y="120.0" />
+      <point x="661.9537037037037" y="120.0" />
+      <point x="-76.25" y="50.0" />
+    </edge>
+    <edge source="pers.weisg.base.springboot_demo.DesignPattern.state.RaffleActivity" target="pers.weisg.base.springboot_demo.DesignPattern.state.CanRaffleState">
+      <point x="-61.25" y="-258.0" />
+      <point x="522.4166666666666" y="358.0" />
+      <point x="290.16666666666663" y="358.0" />
+      <point x="-78.33333333333337" y="74.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="407.0000000000001" y="414.0" />
+  <SelectedNodes>
+    <node>pers.weisg.base.springboot_demo.DesignPattern.state.ClientTest</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
