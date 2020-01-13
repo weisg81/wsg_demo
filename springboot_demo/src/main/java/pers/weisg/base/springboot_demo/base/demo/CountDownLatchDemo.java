@@ -10,14 +10,16 @@ import java.util.concurrent.CountDownLatch;
 public class CountDownLatchDemo {
 
     public static void main(String[] args) throws Exception{
-        CountDownLatch countDownLatch = new CountDownLatch(6);
+        //CountDownLatch和CyclicBarrier有什么区别呢
+        //CountDownLatch只能使用一次，而CyclicBarrier方法可以使用reset()方法重置，所以CyclicBarrier方法可以处理更为复杂的业务场景。
+        CountDownLatch countDownLatch = new CountDownLatch(6);//CountDownLatch只能使用一次
         for (int i = 1; i <= 6; i++) {
             new Thread(() -> {
                 System.out.println(Thread.currentThread().getName()+"\t 国，被灭");
                 countDownLatch.countDown();
             },CounttryEnum.getMsgByCode(i)).start();
         }
-        countDownLatch.await();
+        countDownLatch.await();//阻塞当前线程，直到latch的值为0
         System.out.println(Thread.currentThread().getName()+"\t*****************秦帝国，一统华夏");
     }
 
