@@ -1,0 +1,7 @@
+Hel9o,world
+hello weisg
+hello 韦志
+FileInputStream inputStream = new FileInputStream("1.txt");
+FileChannel fileChannel = inputStream.getChannel();
+FileOutputStream fileOutputStream = new FileOutputStream("2.txt");
+FileChannel fileOutputStreamChannel = fileOutputStream.getChannel();
