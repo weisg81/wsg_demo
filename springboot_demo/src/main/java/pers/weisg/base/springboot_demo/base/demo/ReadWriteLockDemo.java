@@ -10,6 +10,13 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 class MyCache{
     private volatile Map<String, Object> map = new HashMap<>();
     //private Lock lock = new ReentrantLock();
+    //一个是读操作相关的锁，称为共享锁；一个是写相关的锁，称为排他锁
+    /**
+     * 而读写锁有以下三个重要的特性：
+     * （1）公平选择性：支持非公平（默认）和公平的锁获取方式，吞吐量还是非公平优于公平。
+     * （2）重进入：读锁和写锁都支持线程重进入。
+     * （3）锁降级：遵循获取写锁、获取读锁再释放写锁的次序，写锁能够降级成为读锁。
+     */
     private ReentrantReadWriteLock rw = new ReentrantReadWriteLock();
 
     public void put(String key, Object value){

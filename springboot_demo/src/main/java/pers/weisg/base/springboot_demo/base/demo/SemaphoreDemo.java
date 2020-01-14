@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class SemaphoreDemo {
 
     public static void main(String[] args) {
+        //Semaphore(信号量)-允许多个线程同时访问： synchronized 和 ReentrantLock 都是一次只允许一个线程访问某个资源，Semaphore(信号量)可以指定多个线程同时访问某个资源。
         Semaphore semaphore = new Semaphore(3);// 模拟3个停车位
         for (int i = 1; i <= 6; i++) {// 模拟6部汽车
             new Thread(() -> {
