@@ -87,6 +87,7 @@ public class MyThreadPoolDemo {
         //System.out.println(Runtime.getRuntime().availableProcessors());
 
         //模拟10个用户来办理业务，每个用户就是一个来自外部的请求线程
+        new ArrayBlockingQueue<String>(5);
         ExecutorService executorService = Executors.newFixedThreadPool(5);//LinkedBlockingQueue Integer.MAX_VALUE
         ExecutorService executorService2 = Executors.newSingleThreadExecutor();//LinkedBlockingQueue Integer.MAX_VALUE
 

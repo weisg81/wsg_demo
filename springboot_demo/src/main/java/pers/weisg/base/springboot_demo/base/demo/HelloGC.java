@@ -10,6 +10,25 @@ import java.util.concurrent.TimeUnit;
 public class HelloGC {
 
     public static void main(String[] args) {
+        /**
+         * 常用收集器分类如下：
+         *
+         * 串行收集器：Serial，Serial Old
+         * 并行收集器：ParNew，Parallel Scavenge，Parallel Old
+         * 并发收集器：CMS，G1
+         *
+         * 一般jvm调优可以从三个方面去调优
+         * 1、调整新生代的大小到最合适和老年代的大小最合适（上线的时候）
+         * 2、选择合适的GC回收器
+         * 3、代码的调优
+         *
+         * 首先通过在线上服务通过命令行jps -vVml，查找你当前项目的服务的id
+         * 然后通过jstat -gc <服务的id>，查看新生代触发的次数，以及垃圾回收所消耗的时间，查看老年代触发的次数，以及垃圾回收所消耗的时间。
+         * 并且通过打开GC日记，或者是jmap -heap 查看内存的使用情况，如果是内存导致的问题，可以通过设置jvm的参数提高内存-Xms -Xmx。
+         *
+         * https://www.cnblogs.com/levontor/p/11340466.html
+         * https://blog.csdn.net/qq_42326161/article/details/103861600
+         */
         // -XX:MetaspaceSize=64M -XX:+PrintGCDetails
         System.out.println("******hello GC");
         try { TimeUnit.SECONDS.sleep(1000000);} catch(InterruptedException e){ e.printStackTrace();}

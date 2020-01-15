@@ -14,6 +14,24 @@ import java.util.concurrent.TimeUnit;
 public class ContainerNotSafeDemo {
 
     public static void main(String[] args) {
+        /**
+         * SynchronizedSet.synchronizedSet(Set<T> s)
+         * SynchronizedSet.synchronizedList(List<T> list)
+         * SynchronizedSet.synchronizedMap(Map<K,V> m)
+         * 同步容器的实现原理就是在容器的操作方法上，加上了 synchronized 关键字。
+         */
+        /**
+         * jdk 1.5后
+         * List：CopyOnWriteArrayList
+         * Set：CopyOnWriteArraySet、ConcurrentSkipListSet(1.6)
+         * Map：ConcurrentHashMap、ConcurrentSkipListMap(1.6)
+         *
+         * 单端阻塞队列：ArrayBlockingQueue、LinkedBlockingQueue、SynchronousQueue、LinkedTransferQueue、PriorityBlockingQueue、DelayQueue
+         * 双端阻塞队列：LinkedBlockingDeque
+         * 单端非阻塞队列：ConcurrentLinkedQueue
+         * 双端非阻塞队列：ConcurrentLinkedDeque
+         */
+
         //Map<String, String> map = new HashMap<>();
         //Map<String, String> map = new ConcurrentHashMap<>();
         Map<String, String> map = Collections.synchronizedMap(new HashMap<>());
