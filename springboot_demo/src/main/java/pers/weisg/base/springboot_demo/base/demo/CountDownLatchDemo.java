@@ -21,7 +21,8 @@ public class CountDownLatchDemo {
          * 下一步的动作实施者是main函数；对于CyclicBarrier，下一步动作实施者是“其他线程”。
          */
         //CountDownLatch和CyclicBarrier有什么区别呢
-        //CountDownLatch只能使用一次，而CyclicBarrier方法可以使用reset()方法重置，所以CyclicBarrier方法可以处理更为复杂的业务场景。
+        //CountDownLatch只能使用一次，而CyclicBarrier方法可以使用reset()方法重置，
+        // 所以CyclicBarrier方法可以处理更为复杂的业务场景。
         CountDownLatch countDownLatch = new CountDownLatch(6);//CountDownLatch只能使用一次
         for (int i = 1; i <= 6; i++) {
             new Thread(() -> {

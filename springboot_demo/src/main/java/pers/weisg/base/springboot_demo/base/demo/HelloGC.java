@@ -31,7 +31,7 @@ public class HelloGC {
          */
         // -XX:MetaspaceSize=64M -XX:+PrintGCDetails
         System.out.println("******hello GC");
-        try { TimeUnit.SECONDS.sleep(1000000);} catch(InterruptedException e){ e.printStackTrace();}
+        try { TimeUnit.SECONDS.sleep(1000);} catch(InterruptedException e){ e.printStackTrace();}
 
         //-XX:InitialHeapSize=1000M -XX:MetaspaceSize=100M -XX:+PrintGCDetails
 
@@ -55,6 +55,7 @@ public class HelloGC {
         //-Xms128m -Xmx4096m -Xss1024k -XX:MetaspaceSize=1024m -XX:+PrintCommandLineFlags -XX:+PrintGCDetails -XX:+UseParallelGC
         //#-Xms10m -Xmx10m -XX:+PrintGcDetails -XX:+PrintCommandLineFlags -XX:+UseParNewGC (ParNew+Tenured)
         //-Xms10m -Xmx10m -XX:+PrintGCDetails -XX:+PrintCommandLineFlags -XX:+UseParallelGC
+        //-XX:+UseParallelGC (jdk1.8 默认使用的并行收集器)
 
         /**
          * 假如16G内存
@@ -66,7 +67,7 @@ public class HelloGC {
          * -XX:InitialHeapSize=268435456/1024/1024=256M
          * -Xms 初始化内存，默认为物理内存的1/64  当前运行电脑内存为16G
          *
-         *
+         *信号量
          * D:\dev\idea\idea_workspace\wsg\base>jinfo -flag MaxHeapSize  10056
          * -XX:MaxHeapSize=4263510016 = 4263510016/1024/1024=4066M
          * -Xmx 最大内存，默认为物理内存的1/4 当前运行电脑内存为16G
