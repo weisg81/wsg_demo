@@ -14,8 +14,10 @@ import java.util.concurrent.TimeUnit;
  *
  *      不得不阻塞，如何管理
  * ArrayBlockingQueue：是一个基于数组结构的有界用塞队列，此队列按FIFO（先进先出）原则对元系进行排序。
- * LinkedBLockingQueue：一个基于链表结构的阻塞队列，此队列接FIFO（先进先出）排序元素，吞吐量通常要高于ArrayBlockingQueue。
- * SynchronousQueue：一个不存储元素的阻塞队列。每个插入操作必须等到另一个线程调用移除操作，否则插入操作一直处于阻塞状态，吞吐量通常要高
+ * LinkedBLockingQueue：一个基于链表结构的阻塞队列，此队列接FIFO（先进先出）排序元素，
+ *  吞吐量通常要高于ArrayBlockingQueue。
+ * SynchronousQueue：一个不存储元素的阻塞队列。每个插入操作必须等到另一个线程调用移除操作，
+ *  否则插入操作一直处于阻塞状态，吞吐量通常要高
  * @date 2019/11/26 0026
  */
 public class BlockingQueueDemo {
