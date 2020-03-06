@@ -52,7 +52,8 @@ public class HelloGC {
         //-Xss 大小 线程堆栈大小（以字节为单位）。附加字母k或K表示KB
         // jinfo -flag ThreadStackSize 15 查看Xss的大小，默认单位是k 在idea里执行结果是0 注意：0 代表系统默认初始值
 
-        //-Xms128m -Xmx4096m -Xss1024k -XX:MetaspaceSize=1024m -XX:+PrintCommandLineFlags -XX:+PrintGCDetails -XX:+UseParallelGC
+        //-Xms128m -Xmx4096m -Xss1024k -XX:MetaspaceSize=1024m -XX:+PrintCommandLineFlags
+        // -XX:+PrintGCDetails -XX:+UseParallelGC
         //#-Xms10m -Xmx10m -XX:+PrintGcDetails -XX:+PrintCommandLineFlags -XX:+UseParNewGC (ParNew+Tenured)
         //-Xms10m -Xmx10m -XX:+PrintGCDetails -XX:+PrintCommandLineFlags -XX:+UseParallelGC
         //-XX:+UseParallelGC (jdk1.8 默认使用的并行收集器)

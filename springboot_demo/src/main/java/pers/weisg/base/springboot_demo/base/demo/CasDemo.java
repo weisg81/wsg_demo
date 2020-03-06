@@ -32,9 +32,41 @@ public class CasDemo {
      *
      */
 
+    static int i = 1;
+    static float jishu = 0.01f;
+    static float sum = 0.01F;
+
     public static void main(String[] args) {
-        AtomicInteger atomicInteger  = new AtomicInteger(6);
+        /*AtomicInteger atomicInteger  = new AtomicInteger(6);
         System.out.println(atomicInteger.compareAndSet(6, 2020)+"\t current data:"+atomicInteger.get());
-        System.out.println(atomicInteger.compareAndSet(2020, 5)+"\t current data:"+atomicInteger.get());
+        System.out.println(atomicInteger.compareAndSet(2020, 5)+"\t current data:"+atomicInteger.get());*/
+        System.out.println();
+        System.out.println(i+"\t"+jishu);
+        float yigeYueCaili = getYigeYueCaili(23, jishu);
+
+        System.out.println();
+
+        System.out.println("一共工给："+sum+"元");
     }
+
+
+
+    public static float getYigeYueCaili(int monthDays, float jishu){
+
+
+        if(monthDays > 0){
+            jishu = 2 * jishu;
+            monthDays --;
+            i ++;
+            sum += jishu;
+            System.out.println(i+"\t"+jishu);
+
+            getYigeYueCaili(monthDays, jishu);
+        }
+
+        float cailiQ = jishu;
+
+        return cailiQ;
+    }
+
 }

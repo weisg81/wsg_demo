@@ -9,7 +9,9 @@ import java.util.concurrent.CountDownLatch;
  */
 public class CountDownLatchDemo {
 
-    //CountDownLatch （倒计时器）： CountDownLatch是一个同步工具类，用来协调多个线程之间的同步。这个工具通常用来控制线程等待，它可以让某一个线程等待直到倒计时结束，再开始执行。
+    //CountDownLatch （倒计时器）： CountDownLatch是一个同步工具类，
+    // 用来协调多个线程之间的同步。这个工具通常用来控制线程等待，
+    // 它可以让某一个线程等待直到倒计时结束，再开始执行。
 
     public static void main(String[] args) throws Exception{
         /**
