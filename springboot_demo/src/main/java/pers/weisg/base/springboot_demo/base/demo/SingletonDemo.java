@@ -1,7 +1,7 @@
 package pers.weisg.base.springboot_demo.base.demo;
 
 /**
- * Description 这个类作用是什么
+ * Description 单例模式
  * Author WEISANGENG
  * Date 2019/11/24
  **/
