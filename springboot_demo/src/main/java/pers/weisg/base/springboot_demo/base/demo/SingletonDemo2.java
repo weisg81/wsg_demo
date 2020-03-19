@@ -22,5 +22,8 @@ public class SingletonDemo2 {
     public static void main(String[] args) {
         SingletonDemo2 instance = getInstance();
         System.out.println("============="+instance);
+        SingletonDemo3 singletonDemo3 = SingletonDemo3.INSTANCE;
+        singletonDemo3.singletonOperation();
+        //System.out.println("----------------singletonDemo3="+singletonDemo3.si);
     }
 }
