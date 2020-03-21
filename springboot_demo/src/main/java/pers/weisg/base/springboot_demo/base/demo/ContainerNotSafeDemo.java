@@ -60,6 +60,7 @@ public class ContainerNotSafeDemo {
         //List<String> list = new ArrayList<>();
         //List<String> list = Collections.synchronizedList(new ArrayList<>());
         List<String> list = new CopyOnWriteArrayList<>();
+        Queue queue = null;
         //
         for (int i = 0; i < 30; i++) {
             new Thread(() -> {
