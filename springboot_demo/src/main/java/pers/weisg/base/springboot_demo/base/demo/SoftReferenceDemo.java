@@ -4,7 +4,7 @@ import java.lang.ref.SoftReference;
 
 /**
  * @author weisg
- * @description TODO
+ * @description 引用
  * @date 2019/11/27 0027
  */
 public class SoftReferenceDemo {

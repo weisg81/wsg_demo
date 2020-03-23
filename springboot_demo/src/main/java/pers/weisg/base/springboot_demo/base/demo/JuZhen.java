@@ -1,5 +1,7 @@
 package pers.weisg.base.springboot_demo.base.demo;
 
+import java.util.Date;
+
 /**
  * Description 矩阵相乘最重要的方法是一般矩阵乘积。它只有在第一个矩阵的列数（column）和第二个矩阵的行数（row）相同时才有意义
  * Author WEISANGENG
@@ -7,7 +9,38 @@ package pers.weisg.base.springboot_demo.base.demo;
  **/
 public class JuZhen {
 
+    private Date date = null;
+    private String[] strs = null;
+
+    public void testJstack(){
+        date = new Date();
+        strs = new String[350*1024];
+        System.out.println("--------------------------");
+        System.out.println(date);
+        /*try {
+            Thread.sleep(300);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
+    }
+
+
+
     public static void main(String args[]) {
+        JuZhen juZhen = new JuZhen();
+        boolean f = true;
+        while(f){
+            juZhen.testJstack();
+        }
+
+
+        System.out.println("==========================");
+        System.out.println(juZhen.date);
+
+    }
+
+
+    public static void testJuZhen(){
         /**
          * 行*列相加
          * 第一行
